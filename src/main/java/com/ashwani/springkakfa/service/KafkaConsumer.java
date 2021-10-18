@@ -18,7 +18,7 @@ public class KafkaConsumer {
 
     @KafkaListener(topics = "users", groupId = "group_id")
     public void consumeUser(String user) throws IOException {
-        userRepository.save(User.builder().name(user).build());
         log.info(String.format("#### -> Consumed user -> %s", user));
+        userRepository.save(User.builder().name(user).build());
     }
 }
