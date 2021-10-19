@@ -1,4 +1,4 @@
-CREATE TABLE user (
+CREATE TABLE User (
     id serial primary key,
     name varchar(255) not null
 );
